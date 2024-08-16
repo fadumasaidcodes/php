@@ -1,11 +1,100 @@
 body {
-    background: #6495ED;
-    margin-top: -100px;
+    background: #2c3e50;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-form {
-    margin: 25%;
+.intro-section {
+    background: url('./images/background.gif') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the section */
+    position: relative;
+    padding: 80px 0; /* Adjust padding as needed */
+    color: white;
+    height: 75vh; /* Ensure the section takes the full height of the viewport */
+    overflow: hidden; /* Hide any overflow caused by the background image */
 }
 
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
 
-			
+.logo {
+    width: 120px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #d1d1d1;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+}
+
+.intro-text span:nth-child(1) { animation-delay: 0s; }
+.intro-text span:nth-child(2) { animation-delay: 0.2s; }
+.intro-text span:nth-child(3) { animation-delay: 0.4s; }
+.intro-text span:nth-child(4) { animation-delay: 0.6s; }
+.intro-text span:nth-child(5) { animation-delay: 0.8s; }
+.intro-text span:nth-child(6) { animation-delay: 1s; }
+.intro-text span:nth-child(7) { animation-delay: 1.2s; }
+.intro-text span:nth-child(8) { animation-delay: 1.4s; }
+.intro-text span:nth-child(9) { animation-delay: 1.6s; }
+.intro-text span:nth-child(10) { animation-delay: 1.8s; }
+.intro-text span:nth-child(11) { animation-delay: 2s; }
+.intro-text span:nth-child(12) { animation-delay: 2.2s; }
+.intro-text span:nth-child(13) { animation-delay: 2.4s; }
+.intro-text span:nth-child(14) { animation-delay: 2.6s; }
+.intro-text span:nth-child(15) { animation-delay: 2.8s; }
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.btn-outline-light, .btn-primary {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+

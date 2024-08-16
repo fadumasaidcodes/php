@@ -2,13 +2,103 @@
 <html>
 <head>
     <title>Search Engine in PHP</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
+
 <body>
-    <form action="result.php" method="post">
-        <img src="images/logo.png" alt="Logo" />
-        <input type="text" name="user_query" size="80" placeholder="Write something to search" />
-        <input type="submit" name="search" value="Search Now">
-    </form>
+
+    <body>
+        <!-- Intro Section -->
+        <section class="intro-section bg-dark text-white py-5">
+            <div class="container text-center">
+                <h2 class="intro-heading">Welcome to Your Dream Home</h2>
+                <p class="intro-text mb-5">
+                    <span>Discover</span> <span>the</span> <span>best</span> <span>properties</span> <span>tailored</span> <span>to</span> <span>your</span> <span>needs</span> <span>and</span> <span>make</span> <span>your</span> <span>real</span> <span>estate</span> <span>dreams</span> <span>come</span> <span>true.</span>
+                </p>
+                <div class="d-flex justify-content-center flex-wrap">
+                    <a href="#properties" class="btn btn-outline-light me-3 mb-3"><i class="fas fa-home me-2"></i> View Properties</a>
+                    <a href="#contact" class="btn btn-outline-light mx-3 mb-3"><i class="fas fa-envelope me-2"></i> Contact Us</a>
+                    <a href="#about" class="btn btn-outline-light me-3 mb-3"><i class="fas fa-info-circle me-2"></i> About Us</a>
+                </div>
+                <a href="#more-info" class="btn btn-primary mt-4">Learn More</a>
+            </div>
+        </section>
+    <!-- Search Section -->
+    <div class="search-container">
+        <form action="result.php" method="post">
+            <img src="./images/logo.png" alt="Logo" class="logo" />
+            <input type="text" name="user_query" class="search-input" placeholder="Search...">
+            <input type="submit" name="search" value="Search Now" class="search-button">
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-3 text-white" id="Contact">Follow Me</h5>
+                    <p class="text-muted mb-4">
+                        I am a highly skilled and motivated individual with 3 years of experience in software development. 
+                        I am currently seeking new opportunities and am available for hire. 
+                        I am confident in my ability to bring value to any team and would love to discuss potential opportunities with your company.
+                    </p>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mr-3">
+                            <a href="https://www.linkedin.com/in/faduma-ibrahim-msc-230a5387/" class="text-white">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="#" class="text-white">
+                                <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="https://github.com/fadumasaidcodes" class="text-white">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-white">
+                                <i class="fab fa-instagram fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <h5 class="text-uppercase mb-3 text-white">Contact Me</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt fa-lg text-primary mr-3"></i>
+                            <span class="text-muted">123 Main Street, California, USA</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope fa-lg text-primary mr-3"></i>
+                            <span class="text-muted">info@california.com</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fab fa-github fa-lg text-primary mr-3"></i>
+                            <a href="https://github.com/fadumasaidcodes" target="_blank" rel="noopener noreferrer">fadumasaidcodes</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone fa-lg text-primary mr-3"></i>
+                            <span class="text-muted">+1 (800) CALI-FORNIA</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <hr class="border-light">
+                    <p class="text-white">Faduma Ibrahim &copy; 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
