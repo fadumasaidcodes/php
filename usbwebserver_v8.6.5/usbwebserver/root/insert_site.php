@@ -107,7 +107,7 @@
             // Database connection
             $host = 'localhost';  // Your database host
             $user = 'root';       // Your database username
-            $pass = '';           // Your database password
+            $pass = 'usbw';       // Your database password
             $db = 'search';       // Your database name
             
             // Create connection
@@ -115,7 +115,7 @@
             
             // Check connection
             if (!$con) {
-                die("Connection failed: " . mysqli_connect_error());
+                die("<div class='message'>Connection failed: " . mysqli_connect_error() . "</div>");
             }
 
             // Retrieve and sanitize form input
@@ -175,11 +175,10 @@
         ?>
         
         <div class="return-home">
-    <a href="search.html" class="btn btn-outline-light me-3 mb-3">
-        <i class="fas fa-home me-2"></i> Return to Search Page
-    </a>
-</div>
->
+            <a href="search.html" class="btn btn-outline-light me-3 mb-3">
+                <i class="fas fa-home me-2"></i> Return to Search Page
+            </a>
+        </div>
     </div>
 </body>
 </html>

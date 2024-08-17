@@ -1098,3 +1098,8 @@
 2024-08-17T01:22:15.511756Z 187 [Note] 
 2024-08-17T01:23:47.993672Z 188 [Note] 
 2024-08-17T01:24:03.261966Z 189 [Note] 
+2024-08-17T01:33:49.042477Z 222 [Note] 
+2024-08-17T10:04:22.417796Z 0 [ERROR] InnoDB: Table `mysql`.`innodb_table_stats` not found.
+2024-08-17T10:04:22.429831Z 0 [Warning] InnoDB: Recalculation of persistent statistics requested for table `search`.`sites` but the required persistent statistics storage is not present or is corrupted. Using transient stats instead.
+2024-08-17T10:15:47.343438Z 0 [ERROR] InnoDB: Table `mysql`.`innodb_table_stats` not found.
+2024-08-17T10:15:47.350930Z 0 [Warning] InnoDB: Recalculation of persistent statistics requested for table `search`.`sites` but the required persistent statistics storage is not present or is corrupted. Using transient stats instead.

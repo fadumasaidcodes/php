@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result Page</title>
-    <style type="text/css">
+    <title>Search Results</title>
+    <style>
         body {
             background-color: #F5DEB3;
             font-family: Arial, sans-serif;
@@ -83,9 +83,9 @@
 <body>
 
 <div class="search-form">
-    <form action="result.php" method="get">
+    <form action="result.php" method="post">
         <span><b>Write your Keyword:</b></span>
-        <input type="text" name="user_query" size="60" />
+        <input type="text" name="user_query" size="60" required />
         <input type="submit" name="search" value="Search Now">
     </form>
 </div>
@@ -95,49 +95,52 @@
 </div>
 
 <?php
-if (isset($_GET['search'])) {
-    $host = 'localhost';  // Your database host
-    $user = 'root';       // Your database username
-    $pass = '';           // Your database password
-    $db = 'search';       // Your database name
+// Database connection details
+$host = 'localhost';
+$user = 'root';
+$pass = 'usbw';
+$db = 'search';
 
-    // Create connection
-    $con = mysqli_connect($host, $user, $pass, $db);
+// Create connection
+$con = mysqli_connect($host, $user, $pass, $db);
 
-    // Check connection
-    if (!$con) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+// Check connection
+if (!$con) {
+    die("<div class='message'>Connection failed: " . mysqli_connect_error() . "</div>");
+}
 
-    $get_value = mysqli_real_escape_string($con, $_GET['user_query']);
+// Handle form submission
+if (isset($_POST['search'])) {
+    $search_query = mysqli_real_escape_string($con, $_POST['user_query']);
 
-    if ($get_value == '') {
-        echo "<div class='no-results'><b>Please go back and write something in the search box!</b></div>";
+    if ($search_query == '') {
+        echo "<div class='message'>Please enter a search term.</div>";
     } else {
-        $result_query = "SELECT * FROM sites WHERE site_keywords LIKE '%$get_value%'";
-        $run_result = mysqli_query($con, $result_query);
+        // Check if the record already exists
+        $check_query = "SELECT * FROM sites WHERE site_title LIKE '%$search_query%' OR site_keywords LIKE '%$search_query%'";
+        $check_result = mysqli_query($con, $check_query);
 
-        if (mysqli_num_rows($run_result) < 1) {
-            echo "<div class='no-results'><b>Oops! Sorry, nothing was found in the database!</b></div>";
-        } else {
-            while ($row_result = mysqli_fetch_assoc($run_result)) {
-                $site_title = htmlspecialchars($row_result['site_title']);
-                $site_link = htmlspecialchars($row_result['site_link']);
-                $site_desc = htmlspecialchars($row_result['site_desc']);
-                $site_image = htmlspecialchars($row_result['site_image']);
-
-                echo "<div class='results'>
-                    <h2>$site_title</h2>
-                    <a href='$site_link' target='_blank'>$site_link</a>
-                    <p>$site_desc</p>
-                    <img src='images/$site_image' width='100' height='100' alt='$site_title' />
-                </div>";
+        if (!$check_result) {
+            echo "<div class='message'>Error executing query: " . mysqli_error($con) . "</div>";
+        } elseif (mysqli_num_rows($check_result) > 0) {
+            echo "<div class='message'>Record(s) found:</div>";
+            while ($row = mysqli_fetch_assoc($check_result)) {
+                echo "<div class='results'>";
+                echo "<h2><a href='" . $row['site_link'] . "'>" . htmlspecialchars($row['site_title']) . "</a></h2>";
+                echo "<p>" . htmlspecialchars($row['site_desc']) . "</p>";
+                if (!empty($row['site_image'])) {
+                    echo "<img src='images/" . htmlspecialchars($row['site_image']) . "' alt='" . htmlspecialchars($row['site_title']) . "' />";
+                }
+                echo "</div>";
             }
+        } else {
+            echo "<div class='message'>No records found.</div>";
         }
     }
-
-    mysqli_close($con);
 }
+
+// Close the database connection
+mysqli_close($con);
 ?>
 
 </body>
