@@ -128,6 +128,6 @@ class __TwigTemplate_03016a827a25f958c2006c6b7a3de340 extends \Twig\Template
 
     public function getSourceContext()
     {
-        return new Source("", "scripts.twig", "C:\\Users\\nemo\\Documents\\usbwebserver\\phpmyadmin\\templates\\scripts.twig");
+        return new Source("", "scripts.twig", "C:\\Users\\User\\Desktop\\php\\usbwebserver_v8.6.5\\usbwebserver\\phpmyadmin\\templates\\scripts.twig");
     }
 }

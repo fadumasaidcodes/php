@@ -61,6 +61,6 @@ class __TwigTemplate_401368d003750328e46f43efc15737ed extends \Twig\Template
 
     public function getSourceContext()
     {
-        return new Source("", "login/footer.twig", "C:\\Users\\nemo\\Documents\\usbwebserver\\phpmyadmin\\templates\\login\\footer.twig");
+        return new Source("", "login/footer.twig", "C:\\Users\\User\\Desktop\\php\\usbwebserver_v8.6.5\\usbwebserver\\phpmyadmin\\templates\\login\\footer.twig");
     }
 }

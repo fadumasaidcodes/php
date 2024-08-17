@@ -33,17 +33,18 @@ body {
 }
 
 .intro-heading {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     position: relative;
     z-index: 2;
+    padding: 50px;
 }
 
 .intro-text {
-    font-size: 1.2rem;
+    font-size: 1.50rem;
     margin-bottom: 40px;
-    color: #d1d1d1;
+    color: #efe5f0;
     position: relative;
     z-index: 2;
 }
@@ -100,14 +101,15 @@ body {
 
 /* Search Section Styling */
 .search-container {
-    background: url('./images/bull.jpg') no-repeat center center; /* Add your background image URL */
-    background-size: cover; /* Ensure the image covers the section */
-    padding: 80px 20px; /* Ample padding for spacing */
+    background: url('./images/bull.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 20px; /* Reduced padding for a smaller section */
     text-align: center;
-    color: #fff; /* White text color for contrast */
+    color: #fff;
     position: relative;
     overflow: hidden;
-    height: 60vh; /* Adjust height as needed */
+    height: 50vh; /* Reduced height */
+    padding: 110px;
 }
 
 .search-container::before {
@@ -117,44 +119,46 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Darker overlay for better text readability */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 .search-container .logo {
-    width: 120px; /* Adjust logo size as needed */
+    width: 100px; /* Smaller logo */
     height: auto;
-    margin-bottom: 20px; /* Adjust spacing */
+    margin-bottom: 15px; /* Adjusted spacing */
     z-index: 2;
     position: relative;
+  
 }
 
 .search-container form {
     position: relative;
     z-index: 2;
-    display: inline-block; /* Center the form */
-    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background for the form */
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px; /* Smaller padding for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+ 
 }
 
 .search-container .search-input {
-    width: 300px; /* Adjust width as needed */
-    padding: 12px;
-    font-size: 1rem;
-    border: 2px solid #2c3e50; /* Dark border for input */
+    width: 250px; /* Reduced width */
+    padding: 10px; /* Smaller padding */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    border: 2px solid #2c3e50;
     border-radius: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     z-index: 2;
 }
 
 .search-container .search-button {
     width: 100%;
-    padding: 12px;
-    font-size: 1.1rem;
-    background-color: #007bff; /* Primary button color */
-    color: #fff; /* White text color */
+    padding: 10px; /* Reduced padding */
+    font-size: 1rem; /* Slightly smaller font size */
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -163,7 +167,6 @@ body {
 }
 
 .search-container .search-button:hover {
-    background-color: #0056b3; /* Darker shade for hover effect */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    background-color: #0056b3;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
-

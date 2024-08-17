@@ -50,6 +50,6 @@ class __TwigTemplate_3d597613418560fd10ae59c1ea05cc4a extends \Twig\Template
 
     public function getSourceContext()
     {
-        return new Source("", "config/form_display/tabs_bottom.twig", "C:\\Users\\nemo\\Documents\\usbwebserver\\phpmyadmin\\templates\\config\\form_display\\tabs_bottom.twig");
+        return new Source("", "config/form_display/tabs_bottom.twig", "C:\\Users\\User\\Desktop\\php\\usbwebserver_v8.6.5\\usbwebserver\\phpmyadmin\\templates\\config\\form_display\\tabs_bottom.twig");
     }
 }
